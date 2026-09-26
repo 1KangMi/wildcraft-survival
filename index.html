@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wildcraft Survival II</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <div class="topbar">
+        <div class="stat"><span>生命</span><strong id="health">100</strong></div>
+        <div class="stat"><span>饥饿</span><strong id="hunger">100</strong></div>
+        <div class="stat"><span>时间</span><strong id="time">06:00</strong></div>
+        <div class="stat"><span>木头</span><strong id="wood">0</strong></div>
+        <div class="stat"><span>石头</span><strong id="stone">0</strong></div>
+        <div class="stat"><span>草</span><strong id="grass">0</strong></div>
+        <div class="stat"><span>食物</span><strong id="food">0</strong></div>
+        <div class="stat"><span>墙</span><strong id="wallCount">0</strong></div>
+      </div>
+
+      <div class="controls-row">
+        <div class="tool-group">
+          <button class="tool active" data-tool="harvest">采集</button>
+          <button class="tool" data-tool="build">建墙</button>
+          <button class="tool" data-tool="remove">拆除</button>
+        </div>
+
+        <div class="craft-group">
+          <button class="craft" data-craft="food">制作食物（2草）</button>
+          <button class="craft" data-craft="wall">木墙（3木）</button>
+          <button class="craft" data-craft="stoneWall">石墙（2石 + 1木）</button>
+        </div>
+      </div>
+
+      <canvas id="game" width="960" height="576"></canvas>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
